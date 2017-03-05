@@ -51,9 +51,15 @@ article.note {
   padding: 1em;
 }
 
+#color-buttons {
+  display: inline-block;
+}
+
 #color-buttons button {
   width: 30px;
   height: 30px;
+  margin-left: 8px;
+  margin-right: 8px;
   border-radius: 35%;
 }
 
@@ -71,6 +77,18 @@ article.note {
 
 #color-buttons #blue {
   background-color: powderblue;
+}
+
+#delete-container {
+  display: inline-block;
+  margin-left: 30px;
+  height: 30px;
+  vertical-align: middle;
+}
+
+#delete-button {
+  background-color: black;
+  color: white;
 }
 
 .shadow {

@@ -19,6 +19,15 @@ $(document).ready(function() {
   function getNote(body){
     var noteTemplate = '<article class="note shadow rounded" id="note-12"> \
         <div class="note-body">' + body + '</div> \
+        <div id="color-buttons"> \
+          <button type="button" id="yellow" data-color="gold"></button> \
+          <button type="button" id="orange" data-color="orange"></button> \
+          <button type="button" id="green" data-color="palegreen"></button> \
+          <button type="button" id="blue" data-color="powderblue"></button> \
+        </div> \
+        <div id="delete-container"> \
+          <button type="button" id="delete-button">DELETE</button> \
+        </div> \
       </article>';
     return noteTemplate;
   }
