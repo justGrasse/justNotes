@@ -16,9 +16,17 @@ $(document).ready(function() {
     $note.css("background-color", color);
   })
 
+  $('#notes-container').on('click', '#delete-button', function() {
+    console.log($(this));
+    var $note = $(this).closest('.note');
+    $note.remove();
+  })
+
   function getNote(body){
     var noteTemplate = '<article class="note shadow rounded" id="note-12"> \
-        <div class="note-body">' + body + '</div> \
+        <div class="note-body" onClick="this.contentEditable=true;">' 
+        + body
+        + '</div> \
         <div id="color-buttons"> \
           <button type="button" id="yellow" data-color="gold"></button> \
           <button type="button" id="orange" data-color="orange"></button> \
