@@ -46,9 +46,31 @@ body {
 article.note {
   width: 300px;
   height: 200px;
-  background-color: yellow;
+  background-color: gold;
   margin: 20px;
   padding: 1em;
+}
+
+#color-buttons button {
+  width: 30px;
+  height: 30px;
+  border-radius: 35%;
+}
+
+#color-buttons #yellow {
+  background-color: gold;
+}
+
+#color-buttons #orange {
+  background-color: orange;
+}
+
+#color-buttons #green {
+  background-color: palegreen;
+}
+
+#color-buttons #blue {
+  background-color: powderblue;
 }
 
 .shadow {
