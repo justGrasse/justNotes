@@ -4,7 +4,10 @@ $(document).ready(function() {
 
   $('#note-form').on('submit', function(e) {
     e.preventDefault();
-    var noteBody = $(this).children('textarea').val();
+    var $noteTextarea = $(this).children('textarea');
+    var noteBody = $noteTextarea.val();
+    $noteTextarea.val('');
+    $noteTextarea.focus();
     $("#notes-container").prepend(getNote(noteBody));
   })
 
