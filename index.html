@@ -11,17 +11,19 @@
   </head>
   <body>
 
-  <div class="note-form">
-    <form class="new-note" action="index.html" method="post">
-      <textarea name="name" rows="8" cols="80"></textarea>
-      <input type="submit" name="submit-form" value="Add">
+  <h2 id="title-header">justNotes</h2>
+
+  <div id="form-container" class="shadow rounded">
+    <form id="note-form" action="index.html" method="post">
+      <textarea name="name" rows="8" cols="50"></textarea>
+      <input type="submit" id="new-form-button" name="submit-form" value="Add">
     </form>
   </div>
 
-  <div id='notes-container' class='shadow rounded'>
-    <article class='note shadow rounded' id='note-12'>
-      <div class='note-body'>
-        The body of the note goes inside of this div with class 'note-body'
+  <div id="notes-container" class="shadow rounded">
+    <article class="note shadow rounded" id="note-12">
+      <div class="note-body">
+        The body of the note goes inside of this div with class "note-body"
       </div>
       <div>
       </div>

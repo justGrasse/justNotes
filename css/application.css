@@ -3,6 +3,25 @@ body {
   font-family: ubuntu;
 }
 
+#title-header {
+  text-align: center;
+}
+
+#form-container {
+  background-color: white;
+  width: 80%;
+  margin: auto;
+  margin-bottom: 15px;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-around;
+  flex-flow: row wrap;
+}
+
+#note-form {
+  margin: 10px;
+}
+
 #notes-container {
   background-color: white;
   width: 80%;
@@ -11,6 +30,10 @@ body {
   display: flex;
   justify-content: space-around;
   flex-flow: row wrap;
+}
+
+#new-form-button {
+  background-color: yellow;
 }
 
 .note-body {
