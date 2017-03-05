@@ -5,26 +5,23 @@ $(document).ready(function() {
   $('#note-form').on('submit', function(e) {
     e.preventDefault();
     var noteBody = $(this).children('textarea').val();
-    console.log(noteBody);
     $("#notes-container").prepend(getNote(noteBody));
   })
 
   $('#notes-container').on('click', '#color-buttons button', function() {
-    console.log($(this));
     var $note = $(this).closest('.note');
     var color = $(this).data('color');
     $note.css("background-color", color);
   })
 
   $('#notes-container').on('click', '#delete-button', function() {
-    console.log($(this));
     var $note = $(this).closest('.note');
     $note.remove();
   })
 
   function getNote(body){
     var noteTemplate = '<article class="note shadow rounded" id="note-12"> \
-        <div class="note-body" onClick="this.contentEditable=true;">' 
+        <div class="note-body" onClick="this.contentEditable=true;">'
         + body
         + '</div> \
         <div id="color-buttons"> \
