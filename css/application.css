@@ -1,0 +1,102 @@
+body {
+  background-color: lightgray;
+  font-family: ubuntu;
+}
+
+#title-header {
+  text-align: center;
+}
+
+#form-container {
+  background-color: white;
+  width: 80%;
+  margin: auto;
+  margin-bottom: 15px;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-around;
+  flex-flow: row wrap;
+}
+
+#note-form {
+  margin: 10px;
+}
+
+#notes-container {
+  background-color: white;
+  width: 80%;
+  margin: auto;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-around;
+  flex-flow: row wrap;
+}
+
+#new-form-button {
+  background-color: yellow;
+}
+
+.note-body {
+  width: 300px;
+  height: 150px;
+  vertical-align: middle;
+  overflow: scroll;
+}
+
+article.note {
+  width: 300px;
+  height: 200px;
+  background-color: gold;
+  margin: 20px;
+  padding: 1em;
+}
+
+#color-buttons {
+  display: inline-block;
+}
+
+#color-buttons button {
+  width: 30px;
+  height: 30px;
+  margin-left: 8px;
+  margin-right: 8px;
+  border-radius: 35%;
+}
+
+#color-buttons #yellow {
+  background-color: gold;
+}
+
+#color-buttons #orange {
+  background-color: orange;
+}
+
+#color-buttons #green {
+  background-color: palegreen;
+}
+
+#color-buttons #blue {
+  background-color: powderblue;
+}
+
+#delete-container {
+  display: inline-block;
+  margin-left: 30px;
+  height: 30px;
+  vertical-align: middle;
+}
+
+#delete-button {
+  background-color: black;
+  color: white;
+}
+
+.shadow {
+  -moz-box-shadow:    2px 2px 3px 3px #ccc;
+  -webkit-box-shadow: 2px 2px 3px 3px #ccc;
+  box-shadow:         2px 2px 3px 3px #ccc;
+}
+
+.rounded {
+  border-radius: 10px;
+}
