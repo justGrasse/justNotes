@@ -9,9 +9,10 @@ $(document).ready(function() {
     $noteTextarea.val('');
     $noteTextarea.focus();
     $("#notes-container").prepend(getNote(noteBody));
+    confirm("You've added a note!");
   })
 
-  $('#notes-container').on('click', '#color-buttons button', function() {
+  $('#notes-container').on('click', '.color-buttons button', function() {
     var $note = $(this).closest('.note');
     var color = $(this).data('color');
     $note.css("background-color", color);
@@ -25,18 +26,22 @@ $(document).ready(function() {
   function getNote(body){
     var noteTemplate = '<article class="note shadow rounded" id="note-12"> \
         <div class="note-body" onClick="this.contentEditable=true;">'
-        + body
-        + '</div> \
-        <div id="color-buttons"> \
-          <button type="button" id="yellow" data-color="gold"></button> \
-          <button type="button" id="orange" data-color="orange"></button> \
-          <button type="button" id="green" data-color="palegreen"></button> \
-          <button type="button" id="blue" data-color="powderblue"></button> \
-        </div> \
-        <div id="delete-container"> \
-          <button type="button" id="delete-button">DELETE</button> \
-        </div> \
-      </article>';
+        + body + '</div>' + noteButtons() + '</article>';
+    return noteTemplate;
+  }
+
+  function noteButtons(){
+    var noteTemplate = '<div class="note-buttons">  \
+            <div class="color-buttons"> \
+              <button type="button" id="yellow" data-color="gold"></button> \
+              <button type="button" id="orange" data-color="orange"></button> \
+              <button type="button" id="green" data-color="palegreen"></button> \
+              <button type="button" id="blue" data-color="powderblue"></button> \
+            </div>  \
+            <div id="delete-container"> \
+              <button type="button" id="delete-button">DELETE</button>  \
+            </div>  \
+          </div>';
     return noteTemplate;
   }
 

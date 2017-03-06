@@ -13,30 +13,38 @@
 
   <h2 id="title-header">justNotes</h2>
 
-  <div id="form-container" class="shadow rounded">
-    <form id="note-form" action="index.html" method="post">
-      <textarea name="note-body" rows="8" cols="50" placeholder="Add new note here..."></textarea>
-      <input type="submit" id="new-form-button" name="submit-form" value="Add">
-    </form>
+  <div class="wrapper">
+
+    <div id="form-container" class="shadow rounded">
+      <form id="note-form" action="index.html" method="post">
+        <textarea name="note-body" class="shadow rounded" placeholder="Add new note here..."></textarea>
+        <input type="submit" id="new-form-button" name="submit-form" value="ADD NOTE">
+      </form>
+    </div>
+
+    <div id="notes-container" class="shadow rounded">
+      <article class="note shadow rounded" id="note-12">
+        <div class="note-body" onClick="this.contentEditable=true;">
+          Here's an example of a note!
+        </div>
+        <div class="note-buttons">
+          <div class="color-buttons">
+            <button type="button" id="yellow" data-color="gold"></button>
+            <button type="button" id="orange" data-color="orange"></button>
+            <button type="button" id="green" data-color="palegreen"></button>
+            <button type="button" id="blue" data-color="powderblue"></button>
+          </div>
+          <div id="delete-container">
+            <button type="button" id="delete-button">DELETE</button>
+          </div>
+        </div>
+      </article>
+    </div>
   </div>
 
-  <div id="notes-container" class="shadow rounded">
-    <article class="note shadow rounded" id="note-12">
-      <div class="note-body" onClick="this.contentEditable=true;">
-        Here's an example of a note!
-      </div>
-      <div id="color-buttons">
-        <button type="button" id="yellow" data-color="gold"></button>
-        <button type="button" id="orange" data-color="orange"></button>
-        <button type="button" id="green" data-color="palegreen"></button>
-        <button type="button" id="blue" data-color="powderblue"></button>
-      </div>
-      <div id="delete-container">
-        <button type="button" id="delete-button">DELETE</button>
-      </div>
-    </article>
-
-  </div>
+  <footer class="text-center">
+	  <p>Check out the GitHub here: <a href="https://github.com/justGrasse/justNotes" target="_blank">justNotes Repo</a></p>
+	</footer>
 
   </body>
 </html>

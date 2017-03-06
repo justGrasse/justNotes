@@ -1,61 +1,94 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
 body {
   background-color: lightgray;
   font-family: ubuntu;
 }
 
+.wrapper {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+}
+
 #title-header {
   text-align: center;
+  margin: 10px auto;
+  padding: 1em;
 }
 
 #form-container {
   background-color: white;
-  width: 80%;
+  width: 48%;
+  max-width: 500px;
   margin: auto;
   margin-bottom: 15px;
-  display: -webkit-flex;
-  display: flex;
-  justify-content: space-around;
-  flex-flow: row wrap;
+  float: left;
+}
+
+textarea[name="note-body"] {
+  display: block;
+  background-color: lightcyan;
+  font-family: ubuntu;
+  font-size: 1em;
+  width: 80%;
+  height: 150px;
+  margin: 10px auto;
+  padding: 1em;
+  border: none;
 }
 
 #note-form {
-  margin: 10px;
+  padding: 10px;
 }
 
 #notes-container {
   background-color: white;
-  width: 80%;
+  width: 48%;
+  max-width: 500px;
   margin: auto;
-  display: -webkit-flex;
-  display: flex;
-  justify-content: space-around;
-  flex-flow: row wrap;
+  float: right;
 }
 
 #new-form-button {
-  background-color: yellow;
+  display: block;
+  margin: auto;
+  background-color: cyan;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+#new-form-button:hover {
+  background-color: darkcyan;
 }
 
 .note-body {
-  width: 300px;
+  width: 80%;
   height: 150px;
   vertical-align: middle;
   overflow: scroll;
 }
 
 article.note {
-  width: 300px;
+  width: 80%;
   height: 200px;
   background-color: gold;
-  margin: 20px;
+  margin: 20px auto;
   padding: 1em;
 }
 
-#color-buttons {
+.note-buttons {
+  margin: 10px auto;
+}
+
+.color-buttons {
   display: inline-block;
 }
 
-#color-buttons button {
+.color-buttons button {
   width: 30px;
   height: 30px;
   margin-left: 8px;
@@ -63,19 +96,19 @@ article.note {
   border-radius: 35%;
 }
 
-#color-buttons #yellow {
+.color-buttons #yellow {
   background-color: gold;
 }
 
-#color-buttons #orange {
+.color-buttons #orange {
   background-color: orange;
 }
 
-#color-buttons #green {
+.color-buttons #green {
   background-color: palegreen;
 }
 
-#color-buttons #blue {
+.color-buttons #blue {
   background-color: powderblue;
 }
 
@@ -83,12 +116,25 @@ article.note {
   display: inline-block;
   margin-left: 30px;
   height: 30px;
-  vertical-align: middle;
+  vertical-align: top;
 }
 
 #delete-button {
   background-color: black;
   color: white;
+  padding: 5px;
+  border-radius: 5px;
+  height: 30px;
+}
+
+#delete-button:hover {
+  background-color: darkgray;
+}
+
+footer {
+  clear: both;
+  padding: 1em;
+  margin: 10px auto;
 }
 
 .shadow {
@@ -99,4 +145,55 @@ article.note {
 
 .rounded {
   border-radius: 10px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+@media screen and (max-width: 830px) {
+    #form-container {
+      width: 80%;
+      float: none;
+    }
+
+    #notes-container {
+      width: 80%;
+      float: none;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+}
+
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px) {
+  body {
+    font-size: 30pt;
+  }
+
+  #form-container, #notes-container {
+    width: 90%;
+    float: none;
+    max-width: 1100px;
+  }
+
+  #notes-container {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  #new-form-button {
+    font-size: 24pt;
+  }
+
+  #delete-button {
+    font-size: 24pt;
+    height: 60px;
+  }
+
+  .color-buttons button {
+    width: 60px;
+    height: 60px;
+  }
 }
