@@ -1,3 +1,8 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
 body {
   background-color: lightgray;
   font-family: ubuntu;
@@ -5,6 +10,12 @@ body {
 
 #title-header {
   text-align: center;
+  margin: 10px auto;
+}
+
+textarea[name="note-body"] {
+  background-color: lightgray;
+  padding: 1em;
 }
 
 #form-container {
@@ -91,6 +102,10 @@ article.note {
   color: white;
 }
 
+footer {
+  margin: 10px auto;
+}
+
 .shadow {
   -moz-box-shadow:    2px 2px 3px 3px #ccc;
   -webkit-box-shadow: 2px 2px 3px 3px #ccc;
@@ -99,4 +114,8 @@ article.note {
 
 .rounded {
   border-radius: 10px;
+}
+
+.text-center {
+  text-align: center;
 }
