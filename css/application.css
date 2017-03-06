@@ -8,16 +8,23 @@ body {
   font-family: ubuntu;
 }
 
+.wrapper {
+  width: 90%;
+  margin: auto;
+}
+
 #title-header {
   text-align: center;
   margin: 10px auto;
+  padding: 1em;
 }
 
 #form-container {
   background-color: white;
-  width: 45%;
+  width: 48%;
   margin: auto;
   margin-bottom: 15px;
+  float: left;
 }
 
 textarea[name="note-body"] {
@@ -25,7 +32,7 @@ textarea[name="note-body"] {
   background-color: lightcyan;
   font-family: ubuntu;
   font-size: 1em;
-  width: 300px;
+  width: 80%;
   height: 150px;
   margin: 10px auto;
   padding: 1em;
@@ -38,12 +45,9 @@ textarea[name="note-body"] {
 
 #notes-container {
   background-color: white;
-  width: 80%;
+  width: 48%;
   margin: auto;
-  display: -webkit-flex;
-  display: flex;
-  justify-content: space-around;
-  flex-flow: row wrap;
+  float: right;
 }
 
 #new-form-button {
@@ -59,17 +63,17 @@ textarea[name="note-body"] {
 }
 
 .note-body {
-  width: 300px;
+  width: 80%;
   height: 150px;
   vertical-align: middle;
   overflow: scroll;
 }
 
 article.note {
-  width: 300px;
+  width: 80%;
   height: 200px;
   background-color: gold;
-  margin: 20px;
+  margin: 20px auto;
   padding: 1em;
 }
 
@@ -125,6 +129,8 @@ article.note {
 }
 
 footer {
+  clear: both;
+  padding: 1em;
   margin: 10px auto;
 }
 
@@ -140,4 +146,52 @@ footer {
 
 .text-center {
   text-align: center;
+}
+
+@media screen and (max-width: 830px) {
+    #form-container {
+      width: 80%;
+      float: none;
+    }
+
+    #notes-container {
+      width: 80%;
+      float: none;
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
+}
+
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px) {
+  body {
+    font-size: 30pt;
+  }
+
+  #form-container {
+    width: 80%;
+    float: none;
+  }
+
+  #notes-container {
+    width: 80%;
+    float: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  #new-form-button {
+    font-size: 24pt;
+  }
+
+  #delete-button {
+    font-size: 24pt;
+    height: 60px;
+  }
+
+  .color-buttons button {
+    width: 60px;
+    height: 60px;
+  }
 }
