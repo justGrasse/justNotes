@@ -9,7 +9,6 @@ $(document).ready(function() {
     $noteTextarea.val('');
     $noteTextarea.focus();
     $("#notes-container").prepend(getNote(noteBody));
-    confirm("You've added a note!");
   })
 
   $('#notes-container').on('click', '.color-buttons button', function() {
