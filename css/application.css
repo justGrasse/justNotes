@@ -14,8 +14,12 @@ body {
 }
 
 textarea[name="note-body"] {
-  background-color: lightgray;
+  font-size: 1em;
+  font-family: ubuntu;
+  background-color: lightcyan;
   padding: 1em;
+  margin: 10px auto;
+  border: none;
 }
 
 #form-container {
@@ -44,7 +48,15 @@ textarea[name="note-body"] {
 }
 
 #new-form-button {
-  background-color: yellow;
+  display: block;
+  margin: 10px auto;
+  background-color: cyan;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+#new-form-button:hover {
+  background-color: darkcyan;
 }
 
 .note-body {
@@ -62,11 +74,15 @@ article.note {
   padding: 1em;
 }
 
-#color-buttons {
+.note-buttons {
+  margin: 10px auto;
+}
+
+.color-buttons {
   display: inline-block;
 }
 
-#color-buttons button {
+.color-buttons button {
   width: 30px;
   height: 30px;
   margin-left: 8px;
@@ -74,19 +90,19 @@ article.note {
   border-radius: 35%;
 }
 
-#color-buttons #yellow {
+.color-buttons #yellow {
   background-color: gold;
 }
 
-#color-buttons #orange {
+.color-buttons #orange {
   background-color: orange;
 }
 
-#color-buttons #green {
+.color-buttons #green {
   background-color: palegreen;
 }
 
-#color-buttons #blue {
+.color-buttons #blue {
   background-color: powderblue;
 }
 
@@ -94,12 +110,19 @@ article.note {
   display: inline-block;
   margin-left: 30px;
   height: 30px;
-  vertical-align: middle;
+  vertical-align: top;
 }
 
 #delete-button {
   background-color: black;
   color: white;
+  padding: 5px;
+  border-radius: 5px;
+  height: 30px;
+}
+
+#delete-button:hover {
+  background-color: darkgray;
 }
 
 footer {
