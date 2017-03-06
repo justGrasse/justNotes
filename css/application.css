@@ -13,28 +13,27 @@ body {
   margin: 10px auto;
 }
 
+#form-container {
+  background-color: white;
+  width: 45%;
+  margin: auto;
+  margin-bottom: 15px;
+}
+
 textarea[name="note-body"] {
-  font-size: 1em;
-  font-family: ubuntu;
+  display: block;
   background-color: lightcyan;
-  padding: 1em;
+  font-family: ubuntu;
+  font-size: 1em;
+  width: 300px;
+  height: 150px;
   margin: 10px auto;
+  padding: 1em;
   border: none;
 }
 
-#form-container {
-  background-color: white;
-  width: 80%;
-  margin: auto;
-  margin-bottom: 15px;
-  display: -webkit-flex;
-  display: flex;
-  justify-content: space-around;
-  flex-flow: row wrap;
-}
-
 #note-form {
-  margin: 10px;
+  padding: 10px;
 }
 
 #notes-container {
@@ -49,7 +48,7 @@ textarea[name="note-body"] {
 
 #new-form-button {
   display: block;
-  margin: 10px auto;
+  margin: auto;
   background-color: cyan;
   padding: 5px;
   border-radius: 5px;
